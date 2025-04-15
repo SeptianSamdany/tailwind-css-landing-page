@@ -56,3 +56,14 @@
             });
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const section = urlParams.get('section');
+        if (section) {
+          const element = document.getElementById(section);
+          if (element) {
+            element.scrollIntoView();
+          }
+        }
+      });
